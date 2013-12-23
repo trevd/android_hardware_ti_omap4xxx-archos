@@ -1,6 +1,8 @@
 LOCAL_PATH:= $(call my-dir)
 
-ifeq ($(TARGET_BOARD_PLATFORM), $(filter $(TARGET_BOARD_PLATFORM), omap4 omap5))
+ifeq ($(TARGET_BOARD_PLATFORM),omap4)
+# only use the archos omap4 modules if variant is declared
+ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),archos)
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := ion.c
 LOCAL_MODULE := libion_ti
@@ -22,4 +24,5 @@ LOCAL_MODULE_TAGS := optional tests
 LOCAL_SHARED_LIBRARIES := liblog
 include $(BUILD_EXECUTABLE)
 
+endif
 endif

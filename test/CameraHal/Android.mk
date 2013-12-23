@@ -1,5 +1,4 @@
-ifneq ($(TARGET_BOARD_PLATFORM),omap3)
-ifeq ($(TARGET_BOARD_PLATFORM), $(filter $(TARGET_BOARD_PLATFORM), ))
+ifeq ($(TARGET_BOARD_PLATFORM), omap4)
 
 LOCAL_PATH:= $(call my-dir)
 
@@ -32,12 +31,10 @@ LOCAL_MODULE:= camera_test
 LOCAL_MODULE_TAGS:= tests
 
 LOCAL_CFLAGS += -Wall -fno-short-enums -O0 -g -D___ANDROID___
+LOCAL_CFLAGS += -DTARGET_OMAP4
 
-ifeq ($(TARGET_BOARD_PLATFORM),omap4)
-    LOCAL_CFLAGS += -DTARGET_OMAP4
-endif
 
 include $(BUILD_HEAPTRACKED_EXECUTABLE)
 
-endif #ifneq ($(TARGET_BOARD_PLATFORM),omap3)
-endif #ifeq ($(TARGET_BOARD_PLATFORM), $(filter $(TARGET_BOARD_PLATFORM), ))
+endif 
+

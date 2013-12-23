@@ -1,8 +1,7 @@
-ifneq ($(TARGET_BOARD_PLATFORM),omap3)
-ifeq ($(TARGET_BOARD_PLATFORM), $(filter $(TARGET_BOARD_PLATFORM), omap4 omap5 jacinto6))
+ifeq ($(TARGET_BOARD_PLATFORM),omap4)
 
 # only use the archos omap4 modules if variant is declared
-ifeq ($(strip $(TARGET_BOARD_PLATFORM_VARIANT)),archos)
+ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),archos)
 
 LOCAL_PATH:= $(call my-dir)
 
@@ -41,7 +40,7 @@ include $(call first-makefiles-under,$(LOCAL_PATH))
 
 $(clear-android-api-vars)
 
-endif # ifeq ($(strip $(TARGET_BOARD_PLATFORM_VARIANT)),archos)
-endif # ifeq ($(TARGET_BOARD_PLATFORM), $(filter $(TARGET_BOARD_PLATFORM), omap4 omap5 jacinto6))
-endif # ifneq ($(TARGET_BOARD_PLATFORM),omap3)
+endif
+endif 
+
 

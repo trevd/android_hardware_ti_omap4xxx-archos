@@ -15,7 +15,9 @@
 # This file lists the modules that are specific to OMAP4 but are used by
 # all OMAP4 devices.
 
-ifeq ($(TARGET_BOARD_PLATFORM), $(filter $(TARGET_BOARD_PLATFORM), omap4 omap5))
+ifeq ($(TARGET_BOARD_PLATFORM),omap4)
+# only use the archos omap4 modules if variant is declared
+ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),archos)
 PRODUCT_PACKAGES += \
     libdomx \
     libOMX_Core \
@@ -25,7 +27,7 @@ PRODUCT_PACKAGES += \
     libOMX.TI.DUCATI1.VIDEO.DECODER.secure \
     libOMX.TI.DUCATI1.VIDEO.CAMERA \
     libOMX.TI.DUCATI1.MISC.SAMPLE
-endif
+
 PRODUCT_PACKAGES += \
     libstagefrighthw \
     libI420colorconvert \
@@ -36,3 +38,5 @@ PRODUCT_PACKAGES += \
     smc_pa_ctrl \
     tf_daemon \
     libtf_crypto_sst
+endif
+endif

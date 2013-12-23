@@ -34,7 +34,7 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := audio_policy.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE := audio_policy.omap4
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := TIAudioPolicyManager.cpp
