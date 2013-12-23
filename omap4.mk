@@ -12,11 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(TARGET_BOARD_PLATFORM),omap4)
-
-# only use the archos omap4 modules if variant is declared
-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),archos)
-
 PRODUCT_PACKAGES += \
 	libdomx \
 	libOMX_Core \
@@ -50,6 +45,3 @@ PRODUCT_PACKAGES += \
 	audio.hdmi.omap4 \
 
 PRODUCT_VENDOR_KERNEL_HEADERS := hardware/ti/omap4xxx-archos/kernel-headers
-
-endif
-endif
