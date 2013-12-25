@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES := \
 	libdomx \
 	libOMX_Core \
 	libOMX.TI.DUCATI1.VIDEO.H264E \
@@ -23,25 +23,15 @@ PRODUCT_PACKAGES += \
 	libOMX.TI.DUCATI1.MISC.SAMPLE \
 	libstagefrighthw \
 	libI420colorconvert \
-	libion_ti \
 	libtiutils \
-	libtiaudioutils \
 	libcamera \
+	libion_ti \
+	camera.omap4 \
 	libomxcameraadapter \
+	hwcomposer.omap4 \
 	smc_pa_ctrl \
 	tf_daemon \
-	libedid \
-	libdsswb \
-	libtf_crypto_sst \
-	libbt-vendor \
-	uim-sysfs
+	libtf_crypto_sst
 	
-# Hardware specific libs
-PRODUCT_PACKAGES += \
-	hwcomposer.omap4 \
-	camera.omap4 \
-	audio_policy.omap4 \
-	audio.primary.omap4 \
-	audio.hdmi.omap4 \
 
 PRODUCT_VENDOR_KERNEL_HEADERS := hardware/ti/omap4xxx-archos/kernel-headers
