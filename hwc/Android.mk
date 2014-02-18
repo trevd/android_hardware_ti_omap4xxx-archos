@@ -3,6 +3,7 @@ LOCAL_PATH := $(call my-dir)
 # HAL module implementation, not prelinked and stored in
 # hw/<HWCOMPOSE_HARDWARE_MODULE_ID>.<ro.product.board>.so
 include $(CLEAR_VARS)
+LOCAL_CLANG := true
 LOCAL_PRELINK_MODULE := false
 LOCAL_ARM_MODE := arm
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/../vendor/lib/hw
@@ -11,7 +12,6 @@ LOCAL_SHARED_LIBRARIES := liblog libEGL libcutils libutils libhardware libhardwa
 
 LOCAL_SHARED_LIBRARIES += libion_ti
 LOCAL_CFLAGS += -DUSE_LIBION_TI
-
 
 LOCAL_SRC_FILES := \
     blitter.c \

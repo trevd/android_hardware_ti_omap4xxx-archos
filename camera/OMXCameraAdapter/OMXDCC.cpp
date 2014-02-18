@@ -199,7 +199,7 @@ size_t DCCHandler::readDCCdir(OMX_PTR buffer,
                             if (result != (size_t) lSize) {
                                 stat = INVALID_OPERATION;
                             }
-                            buffer = buffer + lSize;
+                            buffer = (OMX_PTR)((char*)buffer + lSize);
                         }
                         // getting the size of the total dcc files available in FS */
                         dcc_buf_size = dcc_buf_size + lSize;

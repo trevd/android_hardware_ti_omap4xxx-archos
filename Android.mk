@@ -20,12 +20,14 @@ BUILD_HEAPTRACKED_EXECUTABLE:= hardware/ti/omap4xxx-archos/heaptracked-executabl
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
+LOCAL_CLANG := true
 LOCAL_SRC_FILES:= heaptracker.c stacktrace.c mapinfo.c
 LOCAL_MODULE:= libheaptracker
 LOCAL_MODULE_TAGS:= optional
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_CLANG := true
 LOCAL_SRC_FILES:= tm.c
 LOCAL_MODULE:= tm
 LOCAL_MODULE_TAGS:= test

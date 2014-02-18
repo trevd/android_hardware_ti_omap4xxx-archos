@@ -5,7 +5,7 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_PRELINK_MODULE := false
-
+LOCAL_CLANG := true
 LOCAL_SRC_FILES:= \
     DebugUtils.cpp \
     MessageQueue.cpp \

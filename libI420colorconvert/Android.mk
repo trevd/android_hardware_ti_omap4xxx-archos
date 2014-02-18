@@ -2,7 +2,7 @@ ifeq ($(TARGET_BOARD_PLATFORM),omap4)
 
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
-
+LOCAL_CLANG := true
 LOCAL_SRC_FILES := \
     ColorConvert.cpp
 

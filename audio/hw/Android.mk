@@ -23,7 +23,7 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_BOARD_PLATFORM), omap4)
 
 include $(CLEAR_VARS)
-
+LOCAL_CLANG := true
 LOCAL_MODULE := audio.primary.omap4
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
@@ -47,7 +47,7 @@ endif # omap4, omap5
 ifeq ($(TARGET_BOARD_PLATFORM), omap4)
 
 include $(CLEAR_VARS)
-
+LOCAL_CLANG := true
 LOCAL_MODULE := audio.hdmi.omap4
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw

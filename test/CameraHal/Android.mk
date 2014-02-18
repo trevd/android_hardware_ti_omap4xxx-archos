@@ -3,7 +3,7 @@ ifeq ($(TARGET_BOARD_PLATFORM), omap4)
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
-
+LOCAL_CLANG := true
 LOCAL_SRC_FILES:= \
 	camera_test_menu.cpp \
 	camera_test_script.cpp
@@ -34,7 +34,7 @@ LOCAL_CFLAGS += -Wall -fno-short-enums -O0 -g -D___ANDROID___
 LOCAL_CFLAGS += -DTARGET_OMAP4
 
 
-include $(BUILD_HEAPTRACKED_EXECUTABLE)
+#include $(BUILD_HEAPTRACKED_EXECUTABLE)
 
 endif 
 
