@@ -24,6 +24,8 @@ ifeq ($(TARGET_BOARD_PLATFORM), omap4)
 
 include $(CLEAR_VARS)
 LOCAL_CLANG := true
+LOCAL_CFLAGS := -Wno-unused-parameter
+
 LOCAL_MODULE := audio.primary.omap4
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
@@ -48,6 +50,8 @@ ifeq ($(TARGET_BOARD_PLATFORM), omap4)
 
 include $(CLEAR_VARS)
 LOCAL_CLANG := true
+LOCAL_CFLAGS := -Wno-unused-parameter
+
 LOCAL_MODULE := audio.hdmi.omap4
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw

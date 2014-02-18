@@ -17,7 +17,10 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libtiaudioutils
+
 LOCAL_CLANG := true
+LOCAL_CFLAGS := -Wno-unused-parameter
+
 LOCAL_SRC_FILES := \
 	src/Base.cpp \
 	src/Pcm.cpp \
